@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Box Model, Margin and Padding</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+    #para1 {
+        background-color: hotpink;
+        padding: 50px;  /*padding andar se hote hai*/
+    }
+    #para2 {
+        background-color: skyblue;
+        padding-top: 30px;  /* Kise bhi side se alag alag margine padding de sakte hai */
+    }
+    #para3{
+        background-color: seagreen;
+        margin: 20px;  /* Margine bher se ate hai*/
+    }
+    #para4{
+        background-color: yellow;
+        border: 20px solid red;
+        padding: 10px 30px 50px 330px;  /*(Ye clock wise hota hai = Top, Right, Bottom, Left) 4 baju se alag alag padding ek sentence mai */
+    }
+</style>
+
+<body>
+    <div class="container mt-3"> 
+        <h2>Box Model, Margin and Padding</h2>
+        <p id="para1">I am Padding 1</p>
+        <br>
+
+        <p id="para2">I am Padding 2</p>padding 2</p>
+        <br>
+
+        <p id="para3">I am Margine</p>
+        <br>
+
+        <p id="para4">I am clockwise padding in different but inline</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

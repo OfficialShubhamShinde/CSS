@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility & z-index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+.box{
+    width: 170px;
+    border: 3px solid red;
+    padding: 30px;
+    margin: 3px;
+}
+#box1{
+background-color: red;
+visibility: visible;  /* (bidefault) */
+}
+
+#box2{
+    background-color: yellow;
+    visibility: hidden;  /* hide hoga */
+}
+
+#box3{
+    background-color: pink;
+    visibility: hidden;
+    display: none;  /* hide bhi hoga our waha se gayab bhi hoga */
+}
+
+#box4{
+    background-color: green;
+    /* z-index
+    a) agar 2 boxes hoge our wo ek ke upar ek aye to konsa show kr dega means z-index
+    b) ye only position - relative, absolute, sticky, fixed ho to hi work krte hai
+    c) humari bidefault static hoti hai to uspar kam nahi krte
+    d) dono ko bhi z-index ki value do (without unit)
+    e) jiski bi z-index ki value jada hogi wahi show hoga
+    */
+    position: absolute;
+    right: 200px;
+    top: 200px;
+    z-index: 28; /* niche wale se ye jada hai to ye show kr dega */
+
+}
+
+#box5{
+    background-color: skyblue;
+    position: absolute;  /* posotion static ke bina konsi bhi honi chaiye */
+    right: 200px;
+    top: 200px;
+    z-index: 20; /* iski value kam he to he nahi show krega */
+
+}
+
+#box6{
+    background-color: orange;
+
+}
+
+#box7{
+    background-color: black;
+
+}
+</style>
+
+<body>
+    <div class="container">
+        <h2>Visibility & z-index</h2>
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+        <div class="box" id="box6"></div>
+        <div class="box" id="box7"></div>
+    </div>
+</body>
+
+</html>

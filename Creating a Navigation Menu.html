@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creating a Navigation Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+.navbar{
+  background-color: aquamarine;
+  border-radius: 50px;  /*Curve krne ke liye*/ 
+  margin-top: 5px;  /*Margin top se*/
+}
+.navbar li{
+  float: left;  /*Left me khichakne ke liye*/
+  list-style:none;  /*uske age squre circle wagera dalne ke liye*/
+}
+.navbar li a{
+  padding: 3px 3px;
+  text-decoration: none;  /*underline hatane ke liye*/
+  color: black; 
+  margin: 30px 20px;
+
+}
+.navbar li a:hover{
+background-color: brown;
+color: yellow;
+}
+#searchBox{
+  border-radius: 30px;
+  background-color: white;
+  border-color: white;
+  margin-right: 7px;
+  width:150px;
+}
+</style>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+      <div class="search">
+       <input type="text" id="searchBox"  placeholder="Search"> <!-- hearch bar adding on navebar -->
+      </div>
+    </nav>
+  </header>
+  <div class="container mt-3">
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

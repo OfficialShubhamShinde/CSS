@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid_Spanning Multiple Rows and Columns</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+  .container {
+    /* Apply grid property: */
+    display: grid;
+
+    /* coloum and rows devidation: */
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+
+    /* gap  */
+    grid-gap: 4px;
+
+    /* gap in row and coloumns:  */
+    /* grid-column-gap: 2rem;
+    grid-row-gap: 4rem; */
+
+  }
+
+  .box {
+    border: 2px solid black;
+    background-color: purple;
+    padding: 20px;
+  }
+
+  .box:first-child{
+    /* first line me se first 2 aur second line mai se first do ko ek krne ke liye:  */
+    /* for coloumn:  */
+    grid-column-start: 1;
+    grid-column-end: 3;  /* 1 line se 3 line tak jaga ocuupy krega */
+
+    /* for rows:  */
+    grid-row-start: 1;
+    grid-row-end: 3;
+  } 
+</style>
+
+<body>
+  <div class="container mt-3">
+    <div class="box">Item-1</div>
+    <div class="box">Item-2</div>
+    <div class="box">Item-3</div>
+    <div class="box">Item-4</div>
+    <div class="box">Item-5</div>
+    <div class="box">Item-6</div>
+    <div class="box">Item-7</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+    <div class="box">Item-8</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

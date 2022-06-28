@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Creating Animations and Keyframes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+  .container{
+    background-color: yellow;
+  }
+  .box{
+    background-color: green;
+    width: 250px;
+    height: 250px;
+    position: relative;
+
+    /* aplying name of animation  */
+    animation-name: shubham;  /* name de do animation ka */
+    animation-duration: 1s;  /* kitna timng me  */
+    animation-iteration-count: 3;  /* 3 he bar karega */
+    /* animation-iteration-count: infinite; ---> chalta rahega */
+
+    /* animation-fill-mode: forwards;  ---> age jake rukega (last stage) */
+    animation-fill-mode: alternate;  /* pahile tha waha ake rukega */
+    
+    animation-timing-function: ease-in-out;
+
+    animation-delay: 3s;  /* 3 sec ke bad chalu hoga */
+
+    animation-direction: reverse;  /* ulta ayega */
+
+    /* one line set animation  */
+    /* animation: name duration timng-function delay iterialtion-coun directiont animation-fill-mode ; */
+    /* animation: rohan 3s ease-in 1s 12 backwards */
+  }
+
+  /* syntext 1 for creating animation */
+  @keyframes shubham{
+    from{
+        width: 200px;
+    }
+    to{
+        width: 400px;
+
+    }
+  }
+
+  /* syntext 2 for creating animation */
+  @keyframes shubham{
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: 250px;
+        left: 0px;
+    }
+    75%{
+        top: 250px;
+        left: 250px;
+    }
+    100%{
+        top: 0px;
+        left: 250px;
+    }
+  }
+</style>
+
+<body>
+  <div class="container mt-3">
+    <div class="box">
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

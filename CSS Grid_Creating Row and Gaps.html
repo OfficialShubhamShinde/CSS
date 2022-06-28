@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Grid_Creating Row and Gaps</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    .container {
+        display: grid;
+
+        /* rows  */
+        grid-template-rows: 1fr 1fr 4fr;  /* 1 la row 1fr second bhi 1fr fir third row 4fr ayega (size, padding) */
+        grid-auto-rows: 3fr;  /* baki ke sare 3fr ho jayegnge */
+
+        /* coloumns  */
+        grid-template-columns: 3fr 2fr;  /* 2 coloumns milenge */
+
+        /* gap (space, margin) */
+        grid-gap: 2px;  /* space (margine) */
+    }
+  .box{
+        background-color: red;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+  <div class="container mt-3">
+    <div class="box">This is Box-1</div>
+    <div class="box">This is Box-2</div>
+    <div class="box">This is Box-3</div>
+    <div class="box">This is Box-4</div>
+    <div class="box">This is Box-5</div>
+    <div class="box">This is Box-6</div>
+    <div class="box">This is Box-7</div>
+    <div class="box">This is Box-8</div>
+    <div class="box">This is Box-9</div>
+    <div class="box">This is Box-10</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

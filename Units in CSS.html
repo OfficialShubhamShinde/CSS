@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Units in CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+  .container {
+
+    font-size: 10px;
+    border: 2px solid red;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  /* em  */
+  #id1{
+    font-size: 1em;  /* em means parent ke size ke 10(jo value doge) uske guna  */
+  }
+  #id3{
+    padding: 1em;  /* 10*1*1 aise milege upar ki milke */
+  }
+
+  /* rem  */
+  html{
+    font-size: 25px;
+  }
+  #id4{
+    font-size: 3rem;  /* ye html tag ke base pe chalta hai. html tag mai font-size jitne hogi uske multiply by jo rem value de hai wo aply hogi */
+  }
+
+  /* vh & vw  */
+  body{
+    height: 100vh;  /* 100vh means pura one screen page utni height mile =ge jo ki green color mai hai 
+                        Doni bhi % ki tara hi work krte hai vh or vw*/
+    width: 100vw;  /* same as height bs ye width hota hai */
+    border: 2px solid green;
+  }
+</style>
+
+<body>
+  <div class="container mt-3">
+    <center>Units in CSS: </center> <br>
+
+    <h3 id="id1">This is Heading One</h3>
+    <h3 id="id2">This is Heading Second</h3>
+    <h3 id="id3">This is Heading Third</h3>
+    <h3 id="id4">This is Heading Fourth</h3>
+    <h3 id="id5">This is Heading Fifth</h3>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

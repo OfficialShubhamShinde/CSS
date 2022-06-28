@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Befor and After Pseudo Selectors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        /* background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover; - yaha add karoge to bahot sari problems ayegi to beader mai befor tag laga ke add kre*/
+    }
+
+    header::before{
+        background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;  /* andar ka words show kr dega */
+        opacity: 0.5;  /* image light kr dega */
+    }
+
+    .navbar {
+        font-size: 20px;
+        display: flex;
+    }
+
+    li {
+        list-style: none;
+        padding: 4px 14px;
+    }
+
+    section {
+        margin: 30px 40px;
+        display: flex;  
+        flex-direction: column;
+        border: 2px solid red;
+        text-align: center;  /* text center mai */
+        justify-content: center;  
+    }
+
+    .navigation {
+        display: flex;
+    }
+
+    /* befor pseudo selector */
+    section::before {
+        content: "I am containet adding through befor pseudo selector.";
+    }
+
+    /* after pseudo selector */
+    section::after {
+        content: "I am containet adding through afer pseudo selector.";
+    }
+</style>
+
+<body>
+    <div class="container1 mt-3">
+        <header>
+            <nav class="navbar">
+                <ul class="navigation">
+                    <li class="item">Home</li>
+                    <li class="item">About Us</li>
+                    <li class="item">Services</li>
+                    <li class="item">Contact Us</li>
+                </ul>
+                <h3></h3>
+            </nav>
+        </header>
+        <section>
+            <h2>Welcome to codingWord</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium, inventore iure? Voluptate,
+                debitis! Impedit a eveniet ipsum! Ab, itaque. Nulla in fuga nihil perspiciatis sint. Modi unde accusamus
+                magni voluptate?</p>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

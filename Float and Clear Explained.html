@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Float & Clear Explained</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    .item {
+        height: 150px;
+        width: 350px;
+        border: 5px solid red;
+        margin: 10px;
+        margin: auto;  /*margin auto krne se bhi center me ayega */
+        clear: both;  /*Ek ke upar ek over lap nahi hoga */ 
+        text-align: right;  /*Words Right ko jayege*/
+    }
+    #box1{
+        float: left;  /*Left mei flote hoga */
+    }
+
+</style>
+
+<body>
+    <div class="container mt-3">
+        <h2>Alighnment: </h2>
+        <br>
+        <div id="box1" class="item">
+            <h4>Fruits</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo cum qui eveniet molestias? Perspiciatis,
+                quaerat ducimus reiciendis ullam quae voluptates.</p>
+        </div>
+
+        <div id="box2" class="item">
+            <h4>Veg</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo cum qui eveniet molestias? Perspiciatis,
+                quaerat ducimus reiciendis ullam quae voluptates.</p>
+        </div>
+
+        <div id="box3" class="item">
+            <h4>NonVeg</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo cum qui eveniet molestias? Perspiciatis,
+                quaerat ducimus reiciendis ullam quae voluptates.</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Box and Text Shadow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    .container {
+        display: flex;
+    }
+
+    .card {
+        padding: 23px 12px;  /* border: 2px solid red; */
+        margin: 23px 12px;
+        background-color: burlywood;
+    }
+
+    /* box-shadow: OffsetX OffsetY Color blureRadius spreadeRadius */
+
+    #card-1 {
+        /* box-shadow: (positive - downShadow) */
+        box-shadow: 8px 8px brown;   /*  pahile argument one side ki showdo second side ki second argument and then color */
+    }
+
+    #card-2 {
+        /* box-shadow: (Nigative - upShadow) */
+        box-shadow: -8px -8px brown;   /*  pahile argument one side ki showdo second side ki second argument and then color */
+
+    }
+    #card-3{
+        /* Blur Redius */
+        box-shadow: -8px  -8px 10px brown;   /*  last wali (10px) argumemnt blur redius ki hai. Us se showdow blur hogi */
+    }
+
+    #card-4{
+        /* Sprade Redius */
+        box-shadow: -8px  -8px 10px 34px brown;    /* last wala sprade radius ka hai jo felta jayega */
+    }
+
+    /* insite */
+    #card-5{
+        box-shadow: inset 8px 8px brown;  /* baher se */
+    }
+
+    #card-6{
+        box-shadow: inset -8px -8px brown;  /* andar se */
+    }
+
+    #card-7{
+        box-shadow: 100px 59px brown, 200px 78px black;  /* box ke andar ke showdow ke andar ki shodow  */ 
+    }
+
+            /* Text Shadow  */
+
+    #text-1{
+        text-shadow: 7px 5px brown;  /* text ko shadow milege */
+    }
+
+    #text-2{
+        text-shadow: 7px 5px 8px brown;  /* 8px se blure hoge  */
+    }
+
+    #text-3{
+        text-shadow: -7px -5px 8px brown;  /* andar se ayega  */
+    }
+</style>
+
+<body>
+    <center>
+        <h2>Box and Text Shadow</h2>
+    </center>
+    <br>
+    <h2>Outside Box</h2>
+    <div class="container mt-3">
+        <div class="card" id="card-1">
+            <h2>Card 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repellendus recusandae corrupti obcaecati
+                dolore sit in non, cum veniam eaque porro repellat voluptas eveniet tempora hic quia asperiores,
+                voluptates itaque sunt fugit. Veniam, laudantium?</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>Card 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repellendus recusandae corrupti obcaecati
+                dolore sit in non, cum veniam eaque porro repellat voluptas eveniet tempora hic quia asperiores,
+                voluptates itaque sunt fugit. Veniam, laudantium?</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repellendus recusandae corrupti obcaecati
+                dolore sit in non, cum veniam eaque porro repellat voluptas eveniet tempora hic quia asperiores,
+                voluptates itaque sunt fugit. Veniam, laudantium?</p>
+        </div>
+        <div class="card" id="card-4">
+            <h2>Card 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repellendus recusandae corrupti obcaecati
+                dolore sit in non, cum veniam eaque porro repellat voluptas eveniet tempora hic quia asperiores,
+                voluptates itaque sunt fugit. Veniam, laudantium?</p>
+        </div>
+        <br>
+    </div>
+    <h2 id="inside">Inside Box</h2>
+    <br>
+    <div class="container">
+        <div class="card" id="card-5">
+            <h2>Card 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repellendus recusandae corrupti obcaecati
+                dolore sit in non, cum veniam eaque porro repellat voluptas eveniet tempora hic quia asperiores,
+                voluptates itaque sunt fugit. Veniam, laudantium?</p>
+        </div>
+        <div class="card" id="card-6">
+            <h2>Card 6</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repellendus recusandae corrupti obcaecati
+                dolore sit in non, cum veniam eaque porro repellat voluptas eveniet tempora hic quia asperiores,
+                voluptates itaque sunt fugit. Veniam, laudantium?</p>
+        </div>
+        <div class="card" id="card-7">
+            <h2>Card 7</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam repellendus recusandae corrupti obcaecati
+                dolore sit in non, cum veniam eaque porro repellat voluptas eveniet tempora hic quia asperiores,
+                voluptates itaque sunt fugit. Veniam, laudantium?</p>
+        </div>
+        <br>
+    </div>
+
+    <h2>Text Shadow</h2>
+    <br>
+    <div class="container-3">
+        <h1 id="text-1">I am heading One</h1>  <br>
+        <h1 id="text-2">I am heading Two</h1> <br>
+        <h1 id="text-3">I am heading Third</h1> <br>
+</div>
+
+        <scri3t src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>

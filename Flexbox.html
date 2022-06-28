@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flexbox</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    /* What is Flexbox:
+        1) Flexbox is one dimention layout method for laying out items in rows or columns.
+        2) CSS Flexbox is a batterway to align items into a container.
+        3) Flexbox = flexible + box.
+        4) display: flex type kr ke flex ke properites add kr sakte hai.
+    */
+
+    .container {
+        height: 744px;
+        width: 100%;
+        border: 2px solid black;
+
+        display: flex;
+        /* Ye kr ke container pe flex ke propertys add kr sakte hai */
+        
+/* 1) Flex Properties on such a parent div: */
+
+    /* 1) flex-direction */
+
+        flex-direction: row;   /* (bidefault) */
+
+        flex-direction: column;  /* (Ek ke niche ek ayenge coloumn wise) */
+
+        flex-direction: column-reverse;  /* coloumn me rehet hai bs ulte boxes ho jate hai sequence mai */
+
+        flex-direction: row-reverse;  /* row me rehet hai bs ulte boxes ho jate hai sequence mai */
+
+
+    /* 2) flex-wrap:  */
+
+        flex-wrap: nowrap; /* bidefault */
+
+        flex-wrap: wrap;  /* Ye krne se responsive website mai ye box sixe ke hisab se upar uiche ho jayenge */
+
+        flex-wrap: wrap-reverse;  /* same property like wrap but ye ulta hoga */
+
+        flex-flow: row-reverse wrap;  /* Uper ke dono property ek hi mai */
+
+
+
+    /* 3) justify  */
+        
+        justify-content: center;  /* Ye center me hi rahega  */
+        
+        justify-content: space-between;  /* same space de do doni box mai */
+        
+        justify-content: space-evenly;  /* Start to end sapaces same hogi 1 box me our last box mai bhi */
+
+        justify-content: space-around;  /* start aur last wale mai left right ko same space ayegi */
+
+
+    /* 4) align-items:   */
+
+        align-items: center; /* Vertically center (bilkul bitch me 4 baju se) */
+
+        align-items: flex-end;  /* End me ayega */
+
+        align-items: flex-start;  /* start me ayega */
+
+        align-items: stretch;  /* automatic space banayega */
+    }
+
+    .item {
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        margin: 3px;
+        background-color: gray;
+        padding: 4px;
+
+/* 2) Flex Properties for such a div:  */
+
+
+    }
+
+    #item1{
+        order: 20;  /* jiski order jada hogi wo box first me ayega (dono ko add krne padegi order)*/
+        flex-grow: 3;  /* jada space lega (padding) 2) Nigative number invalied */
+        flex-shrink: 2;  /*Jyada chota hoga*/
+    }
+
+    #item2{
+        order: 28;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+    }
+
+    #item3{
+        /* flex-direction: column; - change in container class */
+        flex-basis: 120px;  /* 1) When flex-direction is set to row flex-basis: will control width
+                               2)  When flex-direction is set to column flex-basis: will control he
+                            */
+
+        
+    }
+
+    #item4{
+        flex: 2 2 160px; /*1) flex-grow  2) flex-shrink  3) flex-basis */
+    }
+
+    #item5{
+        align-self: flex-end;  /* us div ko align kr sakte ho */
+        align-self: flex-start;
+        align-self: center;
+    }
+</style>
+
+<body>
+    <center>
+        <h2>Flexbox: </h2> <br>
+    </center>
+    <div class="container mt-3">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth Box</div>
+        <div class="item" id="item6">Sixth Box</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

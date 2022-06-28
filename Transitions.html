@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transitions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    .box {
+        display: inline-block;
+        text-align: center;
+        height: 200px;
+        width: 280px;
+        background-color: red;
+        margin: 5px;
+
+        /* Transition  */
+        transition-property: background-color;
+        transition-timing-function: ease-in;
+        /* transition-timing-function: ease-out; */
+    }
+
+    /* with transition-duration */
+    #box1 {
+        transition-duration: 2s;
+        /* 2 sec lega property lag u hone mai */
+    }
+
+    #box1:hover {
+        background-color: black;
+    }
+
+
+    /* transition-timing-function: ease-in */
+    #box2 {
+        transition-duration: 4s;
+        transition-timing-function: ease-out;
+        transition-timing-function: ease-in;
+        transition-timing-function: ease-in-out;
+    }
+
+    #box2:hover {
+        background-color: black;
+    }
+
+    /* transition:delay */
+    #box3 {
+        transition-delay: 2s;  /* s sec ke bad property add hogi */
+    }
+
+    #box3:hover {
+        background-color: black;
+    }
+
+    /* one line transition property */
+    #box4 {
+        transition: background-color 1s ease-in-out 3s;
+        /* konsiProperty, Duration, timeFunction, dilay  */
+    }
+
+    #box4:hover {
+        background-color: black;
+    }
+
+    /* all Property  */
+        /* transition:delay */
+    #box5 {
+        transition: all 1s ease-in-out;  /* all likhke jo over pe de hai wo sare property add hogi  */
+    }
+
+    #box5:hover {
+        background-color: black;
+        height: 250px;
+        width: 300px;
+        border: 5px solid green;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <center>
+        <h2>Transitions in JS</h2>
+    </center>
+
+    <div class="container mt-3">
+        <div class="box" id="box1">
+            I am transition-duration: 2 seconds
+        </div>
+
+        <div class="box" id="box2">
+            transition-timing-function:ease-out;
+        </div>
+
+        <div class="box" id="box3">
+            transition:delay
+        </div>
+
+        <div class="box" id="box4">
+            one line transition property
+        </div>
+
+        <div class="box" id="box5">
+            transition: all
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

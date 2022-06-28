@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> More on CSS Selectors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha38 4-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    div > p{  /* direct parent child to target krega na ki ul ke andar ke p ko */
+        background-color: red;
+        color: white;
+    }
+
+    div + p{   /* p ka pichla element div hoga to */
+        background-color: green;
+    }
+  
+</style>
+
+<body>
+  <div class="container mt-3">
+    <center><h2> More on CSS Selectors: </h2></center>
+    <div class="list">
+        <p>I am a para inside a dive</p>
+        <ul>
+            <li><p>I am a para in the ul-li</p></li>
+        </ul>
+    </div>
+    <p>I am a apara outside a div</p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

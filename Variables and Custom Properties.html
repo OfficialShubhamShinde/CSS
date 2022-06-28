@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Variables and Custom Properties</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    /* na ki global sare ke sare page mai add krne ke liye aise root tag dalke add kre */
+    :root{
+        --box-color: red;  /* property */
+        --max-height: 60px; 
+    }
+    .container {
+        display: flex;
+    }
+
+    .box{
+    /* applying var property (global Variable like/ us div pr he limited rahega): */
+    --box-background-color: blue;
+
+    width: 200px;
+    height: 200px;
+    margin: 2px 9px;
+    border: 2px solid red;
+    }
+
+    #box-1{
+        /* adding this property in targeted element: */
+        background-color: var(--box-background-color);  /* ye property add kr ke sare colours ko change kr sakte hai ek sat  */
+        
+        color: var(--box-color);  /* from root tag */
+    }
+
+    #box-3{
+        /* adding this property in targeted element: */
+        background-color: var(--box-background-color);  /* ye property add kr ke sare colours ko change kr sakte hai ek sat  */
+        
+        color: var(--box-color);  /* from root tag */
+    }
+
+    /* another div */
+
+    .box-2{
+    width: 200px;
+    height: 200px;
+    margin: 2px 9px;
+    border: 2px solid red;
+    }
+    #box-4{
+         /* aise add nahi hoga ye local variable global variables ke sath kam krta hai  */
+        background-color: var(--box-background-color);
+
+        color: var(--box-color);  /* from root tag */
+    }
+
+    #box-5{
+        height: var(--max-height);  /* from root tag */
+    }
+
+</style>
+
+<body>
+    <center>
+        <h2>Variables and Custom Properties</h2>
+    </center>
+    <br>
+    <div class="container mt-3">
+        <div class="box" id="box-1"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="box" id="box-2"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="box" id="box-3"><p>Lorem ipsum dolor sit amet.</p></div>
+    </div>
+    <br>
+
+    <div class="container mt-3">
+        <div class="box-2" id="box-4"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="box-2" id="box-5"><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="box-2" id="box-6"><p>Lorem ipsum dolor sit amet.</p></div>
+    </div3
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+ 
+</html>

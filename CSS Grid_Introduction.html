@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid_Introduction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    .container {
+        /* What is CSS-Gride:
+                1)  It is usefull for creating layouts.
+                2)  hume website mai alag alag colums chaiye yahawaha to gride ke helps se ye kr sakte hai.
+                3)  us column ko bahot ache se edit kr sakte hai.
+        */
+
+        display: grid;  /* for aplying css-gride for such element */
+
+        /* Apply Padding for such coloumns in grid : */
+        /* grid-template-columns: 80px 100px 120px; */  /* 3 coloum chaiye is liye 3 time width dedo px mai */
+        /* grid-template-columns: 80px 150px auto;  */  /* 2 de ke ek auto kroge to wo automatic lega utni jaga */
+        /* grid-template-columns: 1fr 4fr 1fr; */       /* fr is also unit */
+        grid-template-columns: repeat(6, auto);  /* kitne columns chaiye wo first argument and kitne width chaiye wo second argumnent */
+
+        grid-gap: 5px  /* spacing  */
+
+    }
+
+    .item { 
+        border: 2px solid red;
+        margin: 4px;
+        color: white;
+        padding: 20px;
+        background-color: black;
+        /* height: 100px;
+        width: 100px; */
+    }
+</style>
+
+<body>
+    <div class="container mt-3">
+        <div class="item">Tis is item-1</div>
+        <div class="item">Tis is item-2</div>
+        <div class="item">Tis is item-3</div>
+        <div class="item">Tis is item-4</div>
+        <div class="item">Tis is item-5</div>
+        <div class="item">Tis is item-6</div>
+        <div class="item">Tis is item-7</div>
+        <div class="item">Tis is item-8</div>
+        <div class="item">Tis is item-9</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

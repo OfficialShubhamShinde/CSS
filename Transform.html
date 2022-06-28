@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+.box{
+    text-align: center;
+    color: white;
+    display: inline-block;
+    background-color: brown;
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+
+}
+#box-1{
+    /* Transform : Rotation (Rotate krea) */
+    transform: rotate(45deg);
+}
+
+#box-2:hover{
+    /* hover krne pr aply hoga */
+    transform: rotate(45deg);
+}
+
+#box-3:hover{
+    /* hover krne pr aply hoga - 3D type show hoga */
+    transform: skew(40deg);
+}
+
+#box-4:hover{
+    /* 2 guna bada hoga */
+    transform: scale(2);
+}
+
+#box-5:hover{
+    /*  Hover krne pe X axis me 123px move hoga */
+    transform: translateX(123px);
+}
+
+#box-6:hover{
+    /*  Hover krne pe Y axis me 123px move hoga */
+    transform: translateY(123px);
+}
+
+#b:hover{
+    /* X & Y anis dono pai ek he time add kr sakte hai */
+    transform: translate(123px, 123px);
+}
+
+</style>
+
+<body>
+    <center>
+        <h2>Transform in JS</h2>
+    </center>
+    <div class="container mt-3">
+        <div class="box"  id="box-1">
+            this is box
+        </div> <br> <br>
+
+        <div class="box" id="box-2">
+            hover krne pai rotate hoga 45deg
+        </div> <br> <br>
+
+        <div class="box" id="box-3">
+            Hover krne pai 3D type show hoga
+        </div> <br> <br>
+
+        <div class="box" id="box-4">
+            Hover krne pai 2 guna bada hoga
+        </div> <br> <br>
+
+        <div class="box" id="box-5">
+            Hover krne pe X axis me 123px move hoga
+        </div> <br> <br>
+
+        <div class="box" id="box-6">
+            Hover krne pe y axis me 123px move hoga
+        </div> <br> <br>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

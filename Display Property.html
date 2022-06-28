@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+</head>
+
+<style>
+    /* What is display: block & display: inline or display: inline-block 
+        1) display: block - 
+                        a) pure jaga lega horizontal vertical me uski jitne size he suke barabr.
+                        b) block element ko width-auto set krne pr wo center ata hai.
+                        c) 
+        2) display: inline - 
+                        a) ye bs utni jaga lega utni jaga suki hai.
+                        b) inline ko width-auto set nahi kr sakte wo bitch me nahi ayega.
+                        c) inline ko hilane ke liye pahile usko display: block kare.
+                        d) 
+        3) display: inline-block -
+                        a) iline kr ke bhi uske width change krne ke liye inline-block ka use hota hai
+    
+    
+    */
+    header {
+        margin: auto;
+        /*Ye kr ke bhi niche wale dono center nahi ayenge*/
+        border: 2px solid red;
+    }
+
+    img {
+        /* is a inline elemet  */
+        width: 100px;
+        display: block;
+        /*inline ko block krke hala sakte ho*/
+        margin: auto;
+        /*Bitch me la dega 50 50 % margine ke sath*/
+    }
+
+    h2 {
+        margin: 0px;
+        text-align: center;
+    }
+    .box{
+        border: 4px solid black;
+        background-color: gray;
+        margin: 4px;
+        padding: 23px;
+        /* display: block;  /* Box type banke ek ke niche ek ayenge */
+        display: inline-block;  /*ek line me ayenge*/
+        box-sizing: border-box;  /*Jo humne width de hai wo change nahi karega.*/
+        width: 30%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <center>
+            <h2>Display Property: </h2>
+        </center> <br>
+
+
+        <header class="top">
+            <h2>Welcome to Blog</h2> <!-- is a inline elemet  -->
+            <img src="https://rukminim1.flixcart.com/image/416/416/k15bjww0/poster/t/t/h/large-kd-a-romantic-night-with-couple-sticker-poster-night-moon-original-imafjx5nphhfympd.jpeg?q=70"
+                id="img" alt=""> <!-- is a block elemet  -->
+        </header>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum unde aspernatur nemo? Adipisci autem
+                quidem amet sequi cumque aliquam consequatur mollitia quas laudantium, expedita qui aspernatur
+                voluptate! Unde omnis, eaque impedit, officiis earum est reprehenderit expedita aliquam quod cumque
+                assumenda.</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum unde aspernatur nemo? Adipisci autem
+                quidem amet sequi cumque aliquam consequatur mollitia quas laudantium, expedita qui aspernatur
+                voluptate! Unde omnis, eaque impedit, officiis earum est reprehenderit expedita aliquam quod cumque
+                assumenda.</p>
+        </div>
+        <div class="box">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum unde aspernatur nemo? Adipisci autem
+                quidem amet sequi cumque aliquam consequatur mollitia quas laudantium, expedita qui aspernatur
+                voluptate! Unde omnis, eaque impedit, officiis earum est reprehenderit expedita aliquam quod cumque
+                assumenda.</p>
+        </div>
+    </div>
+</body>
+
+</html>

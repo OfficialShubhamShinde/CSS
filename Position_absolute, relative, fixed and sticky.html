@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Position absolute, relative, fixed and sticky</title>
+</head>
+
+<style>
+    .container {
+        height: 1000px;
+    }
+    .myBox {
+        border: 3px solid red;
+        margin: 3px;
+        display: inline-block;
+        padding: 30px;
+
+
+        /* CSS Positions:
+            1) Static (default)
+            2) relative
+            3) absolute
+            4) sticky
+            5) fixed
+        */
+    }
+
+    #box1 {
+        /*  1) Static:  
+            a) Bydefault her ke position static he hoti hai
+         */
+        position: static;
+
+    }
+
+    #box2 {
+        /*2) Relative
+            a) Relative mai hum us chij ko top, bottom, right, left move kr sakte hai. 
+            b) baki kisi chij ko nahi hilake.
+            c) Lakin relative mai original position blank reh jati hai.
+
+        */
+        position: relative;
+        top: 10px;
+        bottom: 10px;
+        right: 10px;
+        left: 30px;
+    }
+
+    #box3 {
+        /* 3) absolute
+            a) Same chij relative ke tara kr sakte.
+            b) But absolute mai original position se change hota hai lakin wo blank nahi rehti.
+            c) relative to the position of its first parent.
+        */
+        position: absolute;
+        top: 50px;
+        right: 400px;
+        bottom: 10;
+        left: 600;
+    }
+
+    #box4 {
+        /* 5) fixed
+            a)  When u scroll up & down at that time such a div not moving any direction fix at that position but page all scrooled 
+        */
+        position: fixed;
+        left: 600px;
+        top: 50px;
+    }
+
+    #box5 {
+        /* 4) sticky
+            a) When u scroll down tab wo div upar jake chipak jayega.
+        */
+
+        position: sticky;
+        top: 3px;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <center>
+            <h2>Position: absolute, relative, fixed and sticky</h2>
+        </center>
+        <br>
+
+        <div class="boxes">
+            <div class="myBox" id="box1">Box 1</div>
+            <div class="myBox" id="box2">Box 2</div>
+            <div class="myBox" id="box3">Box 3</div>
+            <div class="myBox" id="box4">Box 4</div>
+            <div class="myBox" id="box5">Box 5</div>
+        </div>
+    </div>
+</body>
+
+</html>

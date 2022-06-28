@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media Queries</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+  .box{
+    background-color: red;
+    color: black;
+    font-size: 72;
+    text-align: center;
+
+    display: none;
+
+  }
+
+  @media (max-width:300px){  /* syntex of media queries: Agar max-width: utni ho to wo property show kr do */
+    #box1{   /* target karo jispe wo property add krne hogi */
+        display: block;  /* usme ye properties add kr do */
+        background-color: red;
+    }
+  }
+
+  @media only screen and (min-width: 300px) and ( max-width: 1000px){ /* maximum or minimum width itne ho to ye kare */
+    #box2{  
+        display: block;
+        background-color: green;
+    }
+  }
+
+  @media  (min-width: 1000px) and (max-width:1300px){  /* ye condition dekhega  */
+    #box3{  /* sahi hogi to ye properties add kr dega */
+        display: block;
+        background-color: burlywood;
+    }    
+  }
+
+  @media only screen and (min-width: 1300px) {  /* only screen ka matlab bahot sare media queries ke properties hai to usmese only scrren wale ko add kre */
+    #box4{
+        display: block;
+        background-color: violet;
+    }
+}
+
+</style>
+
+<body>
+  <div class="container mt-3">
+    <center><h2>Media Queries: </h2></center>
+    <div class="box" id="box1">I am a Phone</div>
+    <div class="box" id="box2">I am a laptop</div>
+    <div class="box" id="box3">I am a computer</div>
+    <div class="box" id="box4">I am a Bike</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

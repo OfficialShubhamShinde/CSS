@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Styling Links and Buttons</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+.para{
+  background-color: aquamarine;
+  border: pink 5px solid;  
+}
+#link{
+cursor: pointer;
+text-decoration: none;  /*Underline hatane ke liye*/
+}
+#btn{
+  background-color: brown;  /*Background clour change hoga*/ 
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;  /*Jad krne ke liye*/
+  border-radius: 5px;  /*box ke side se corve lane ke liye*/
+}
+#btn:hover{
+  background-color: white;  /*read more pr curser leke jane pr ye properties add hogi*/
+  border: 4px solid red;
+}
+a:hover{
+  color: white;  /*read more pr curser leke jane pr ye properties add hogi*/
+}
+a:visited{  /*Ek bar visit krne ke bad ye wali property lagu hogi*/
+  color: black;
+}
+a:active{  /*us page pr hogi to ye property lagu hogi */
+  background-color: yellow;
+}
+</style>
+
+<body>
+  <div class="container mt-3">
+    <center><h2>Styling Links and Buttons: </h2></center> <br>
+    <div class="para">
+      <h3>Why Learn CSS?</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique nemo quas, quidem temporibus commodi, placeat eveniet aliquam quam eligendi aut a amet impedit ut error pariatur saepe repudiandae, recusandae quibusdam! <br> <a href="https://www.google.com" target="_blank" id="link">Read More...</a> <button id="btn">Read More</button> </p>
+      
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
